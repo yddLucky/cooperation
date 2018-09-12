@@ -1,0 +1,77 @@
+/**
+	Css for calendar
+*/
+
+#calendar{
+	width:100%;
+	height:0;
+	padding-bottom:95%;
+	/*overflow:hidden;*/
+	position:relative;
+}
+#calendar .calendarContent{
+	width:100%;
+	height:100vw;
+	overflow:hidden;
+	border-top:1px solid #ccc;
+}
+#calendar .calendarContent li{
+	background:#fbfbfb;
+	float:left;
+	display:inline-block;
+	width:14.28%;
+	height:14.28%;
+	font-size:1.6rem;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	text-align: center;
+	color: #000;
+	position:relative;
+	overflow:hidden;
+}
+#calendar .calendarContent li:nth-child(7n+1){border-left:1px solid #ccc;}
+#calendar .calendarContent li.today{
+    /*color: #f90;*/
+    /*font-size:1.6rem;*/
+}
+#calendar .calendarContent li.passDay{
+	/*color: #f90;*/
+}
+#calendar .calendarContent li.signInDay{
+	color: #B2B2B2;
+}
+#calendar .calendarContent li.lastMonth, #calendar .calendarContent li.nextMonth{
+	color: #B2B2B2;
+}
+
+#calendar li .dateBox, #calendar li .morning, #calendar li .afternoon{position:absolute;}
+#calendar li .dateBox{z-index:2;top:25%;left:0;width:100%;text-align:center;}
+#calendar li .morning, #calendar li .afternoon{z-index:1;background:#fff}
+#calendar li .morning{width:80%;height:40%;top:10%;left:10%;border-top-left-radius:5px;border-top-right-radius:5px;}
+#calendar li .afternoon{width:80%;height:40%;left:10%;bottom:10%;border-bottom-left-radius:5px;border-bottom-right-radius:5px;}
+#calendar li .normal, .tips div.normal span{background:#1BBDFE}/* 正常 */
+#calendar li .holiday, .tips div.holiday span{background:#0077c1}/* 节假日 */
+#calendar li .vacation, .tips div.vacation span{background:#2EC8CA}/* 休假 */
+#calendar li .absence, .tips div.absence span{background:#D4D4D4}/* 缺勤 */
+#calendar li .late, .tips div.late span{background:#FE8B4B}/* 迟到 */
+
+.calendar{
+	width: 100%;
+    overflow: hidden;
+    color: #666;
+}
+.calendar li{
+	width:14.28%;
+	padding: 10px 0;
+	font-size:1.6rem;
+	float:left;
+	text-align: center;
+}
+
+.calendarBox{width:100%;overflow:hidden;display:block;position:relative;}
+.currentMonth{width:100%;height:100vw;top:0;left:0;position:absolute;font-size:16rem;text-align:center;opacity:0.3;}
+.calendarMonth{text-align:center;font-size:2rem;margin:0 auto;}
+
+.viewPrevMonth, .viewNextMonth{background:url(../images/jt.png) no-repeat;background-size:100%;width:40px;height:40px;display:block;position:absolute;top:0;}
+.viewPrevMonth{left:10px;transform:rotate(-180deg);}
+.viewNextMonth{right:10px;}

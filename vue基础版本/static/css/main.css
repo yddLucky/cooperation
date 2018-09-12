@@ -1,0 +1,238 @@
+/* reset */
+*{box-sizing:border-box;}
+html,body{width:100%;height: 100%;font-size:62.5%;font-family:'Microsoft YaHei', Arial, Helvetica, sans-serif;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:normal}
+a{text-decoration:none;outline:none;color:inherit}
+a:hover,a:visited,a:active,a:link{text-decoration:none}
+ul,li{list-style:none;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit}
+input,button,select,textarea{outline:none}
+
+.view-container {
+    position: relative;
+}
+
+.view-frame.ng-enter, .view-frame.ng-leave {
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.view-frame.ng-enter {
+    left: 100%;
+}
+
+.view-frame.ng-enter {
+    -webkit-animation: 0.2s moveIn;
+    -moz-animation: 0.2s moveIn;
+    -o-animation: 0.2s moveIn;
+    animation: 0.2s moveIn;
+    z-index: 100;
+}
+
+.view-frame.ng-leave {
+    -webkit-animation: 0.2s fade-out;
+    -moz-animation: 0.2s fade-out;
+    -o-animation: 0.2s fade-out;
+    animation: 0.2s fade-out;
+    z-index:99;
+}
+
+@keyframes moveIn {
+    from { left: 100%; }
+    to { left: 0; }
+}
+@-moz-keyframes moveIn {
+    from { left: 100%; }
+    to { left: 0; }
+}
+@-webkit-keyframes moveIn {
+    from { left: 100%; }
+    to { left: 0; }
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+@-moz-keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+@-webkit-keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+/* don't forget about the vendor-prefixes! */
+
+.container{
+    width:100%;
+    height: 100%;
+    color: #555;
+}
+.btn{
+    width: 70%;
+    display: block;
+    padding: 6px 13px;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: #00c0ef;
+    color: #fff;
+    border-radius: 5px;
+}
+.commonPrompt{
+    width: 100%;
+    padding: 10px 20px 0;
+    background:#4EB07F;
+    color: #fff;
+    text-align:center;
+    overflow:hidden;
+}
+.commonPrompt h3{
+    font-size: 4rem;
+    margin-bottom: 5px;
+    height:55px;
+}
+.commonPrompt p{
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    /*color:#FE9B56;*/
+    height:26px;line-height:26px;
+    margin-bottom:5px;
+}
+.commonPrompt p.isInSignArea{
+    /*color:#8BD0CD;*/
+}
+/* 绑定信息 */
+.bindInformation{
+    padding:10px; 
+}
+.bindInformation .bindList{
+    overflow:hidden;
+}
+.bindInformation .bindList li{
+    font-size:1.6rem;
+    color:#303030;
+    line-height:5rem;
+    float:left;display:inline-block;width:50%;
+}
+.bindInformation .bindList li label{
+    float:left;
+    margin-right:10px;
+    width:90px;
+    text-align:right;
+} 
+.bindInformation .bindList li input{
+    width:calc(100% - 100px);
+    line-height: 3rem;
+    border-radius: 5px;
+    border: 1px solid #A0A0A0;
+    padding: 0 5px;
+}
+.bindInformation .bindList li:last-child input{
+    width:calc(100% - 215px);
+}
+.btn-gray{
+    width: 108px;
+    float: right;
+    background: #ccc;
+    margin-top: 12px;
+}
+.signBtn{width:80%;border-radius:10px;border:2px solid #FE8B4B;height:50px;line-height:46px;text-align:center;color:#FE8B4B;display:block;margin:0 auto 10px;font-size:1.4rem;}
+.signDisabled{color:#8BD0CD  !important}
+/* 我的小店 */
+.myListUI{
+    width: 100%;
+    height: calc(100% - 244px);
+    overflow:auto;
+}
+.myListUI li{
+    background:#fff;
+    width: 95%;
+    height: 95px;
+    margin:10px auto 0;
+    overflow: hidden;
+    border: 1px solid #cfcaca;
+    /*border-radius:5px;*/
+    /*box-shadow:2px 2px 2px rgba(0,0,0,0.2);*/
+    padding: 14px 10px;
+}
+.myListUI .photo{
+    float: left;
+    width: 60px;
+    height: 66px;
+    margin-right: 10px;
+}
+.myListUI .photo img{
+    width: 100%;
+}
+.textBox{
+    float: left;
+    font-size: 1.4rem;
+    width: calc(100% - 90px);
+}
+.textBox dt{
+    color: #333;
+    font-size:1.6rem
+}
+.textBox dd{
+    color: #999;
+    font-size:1.2rem
+}
+.arrow{
+    float: right;
+    line-height: 66px;
+}
+.myList {height:100%;width:100%;background:#EAECEB}
+.header{background:#fff;width:100%;height:50px;line-height:50px;padding:0 10px}
+.header .logo{height:34px;float:left;margin:5px 10px 5px 0;}
+.header .logo img{display:block;height:100%}
+.header .title{float:left;height:50px;line-height:50px;margin:0 10px 0 0;color:#0975bf;font-size:1.4rem;}
+.banner, .bannner a{width:100%;height:180px;overflow:hidden;display:block;}
+.banner a img{width:100%;height:100%;margin:0 auto;display:block;}
+.tips{width:100%;overflow:hidden;}
+.tips div{float:left;display:inline-block;width:20%;height:25px;line-height:25px;font-size:1.4rem;}
+.tips div span{width:10px;height:10px;margin:7px 4px 0 2px;display:inline-block;float:left;border-radius:50%;}
+/* 新增 */
+ul.bindList{
+    overflow: hidden;
+    width: 100%;
+}
+ul.bindList li{
+    float: left;
+    width: 50%;
+}
+ul.bindList li a.signBtn{
+    border-radius:2px;
+    border: 0px solid #8BD0CD;
+    background: #fff;
+    height: 35px;
+    line-height: 35px;
+    color: #FE8B4B;
+}
+.tips div{
+    width: 24%; 
+    text-align: center;  
+}
+.tips div span{
+    margin:0px;
+    float:none;
+    width: 30px;
+    border-radius: 5px;
+    margin-right: 7px;
+}
+.calendarBox{
+    /*border-bottom: 1px solid #ddd;*/
+}
+.tips{
+    margin-top: 10px;
+}
